@@ -9,6 +9,19 @@
 import UIKit
 
  public extension UITableView {
+    ///滑动到底部
+    public func scrollToBottom(animated: Bool = true) {
+        let section = numberOfSections
+        if section < 1 {
+            return
+        }
+        let row = numberOfRows(inSection: section - 1)
+        if row < 1 {
+            return
+        }
+        let indexPath = IndexPath(row: row - 1, section: section - 1)
+        scrollToRow(at: indexPath, at: .bottom, animated: animated)
+    }
         
     public func mw_dataSource(_ value: UITableViewDataSource?) -> Self {
         dataSource = value
