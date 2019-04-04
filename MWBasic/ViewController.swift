@@ -15,6 +15,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         testBtn.mw_eventInterval = 10
+        
+        let _ = MWStream().execute({ (dataValue,streamContinue) in
+            print("dataDic=\(dataValue)")
+            streamContinue(["key": 1])
+            print("test1")
+        })?.execute({ (dataValue,streamContinue) in
+            print("dataDic=\(dataValue)")
+            streamContinue(["key": 2])
+            print("test2")
+        })
     }
 
     @IBAction func btnActopm(_ sender: UIButton) {

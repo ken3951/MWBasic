@@ -38,6 +38,7 @@
 		389FBEB5224E026700E1CD7E /* UIImage+BlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE95224E026700E1CD7E /* UIImage+BlurGlass.m */; };
 		389FBEB6224E026700E1CD7E /* NSDate+MWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE97224E026700E1CD7E /* NSDate+MWCategory.m */; };
 		389FBEB7224E026700E1CD7E /* UIControl+MWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE99224E026700E1CD7E /* UIControl+MWCategory.m */; };
+		38CFEAF72255B8D000770128 /* MWStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEAF62255B8D000770128 /* MWStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		389FBE9B224E026700E1CD7E /* UIImage+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MWCategory.h"; sourceTree = "<group>"; };
 		389FBE9C224E026700E1CD7E /* UIImage+BlurGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurGlass.h"; sourceTree = "<group>"; };
 		389FBE9D224E026700E1CD7E /* NSURLRequest+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+MWCategory.h"; sourceTree = "<group>"; };
+		38CFEAF62255B8D000770128 /* MWStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				389FBE7A224E026700E1CD7E /* MWToastView.swift */,
 				389FBE7B224E026700E1CD7E /* MWDefine.swift */,
 				389FBE8C224E026700E1CD7E /* MWFunction.swift */,
+				38CFEAF62255B8D000770128 /* MWStream.swift */,
 				389FBE7C224E026700E1CD7E /* MWExtension */,
 				389FBE8D224E026700E1CD7E /* CategoryClass */,
 			);
@@ -261,6 +264,7 @@
 				389FBEB1224E026700E1CD7E /* NSNumber+MWCategory.m in Sources */,
 				389FBEAB224E026700E1CD7E /* UIImage+MWExtension.swift in Sources */,
 				389FBEAA224E026700E1CD7E /* UIColor+MWExtension.swift in Sources */,
+				38CFEAF72255B8D000770128 /* MWStream.swift in Sources */,
 				389FBEA7224E026700E1CD7E /* Dictionary+MWExtension.swift in Sources */,
 				389FBEA8224E026700E1CD7E /* UIView+MWExtension.swift in Sources */,
 				389FBEB0224E026700E1CD7E /* UIWebView+MWCategory.m in Sources */,
