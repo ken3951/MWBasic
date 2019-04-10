@@ -17,11 +17,11 @@ class ViewController: UIViewController {
         testBtn.mw_eventInterval = 10
         
         let _ = MWStream().execute({ (dataValue,streamContinue) in
-            print("dataDic=\(dataValue)")
+            print("dataDic=\(dataValue ?? "")")
             streamContinue(["key": 1])
             print("test1")
         })?.execute({ (dataValue,streamContinue) in
-            print("dataDic=\(dataValue)")
+            print("dataDic=\(dataValue ?? "")")
             streamContinue(["key": 2])
             print("test2")
         })
