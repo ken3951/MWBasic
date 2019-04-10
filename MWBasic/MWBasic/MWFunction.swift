@@ -108,6 +108,32 @@ public func mw_getAppName() -> String {
     return appName
 }
 
+///获取当前window截图
+public func mw_getScreenShotFromWindow() -> UIImage? {
+    UIGraphicsBeginImageContextWithOptions(CGSize(width: SCREEN_WIDTH*UIScreen.main.scale, height: SCREEN_HEIGHT*UIScreen.main.scale), true, UIScreen.main.scale)
+    
+    guard let context = UIGraphicsGetCurrentContext() else {
+        return nil
+    }
+    
+    UIApplication.shared.keyWindow?.layer.render(in: context)
+    
+    let viewImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    
+    guard let imageCG = viewImage?.cgImage else {
+        return nil
+    }
+    
+    guard let sendImageCG = imageCG.cropping(to: CGRect(x: 0, y: 0, width: SCREEN_WIDTH*UIScreen.main.scale, height: SCREEN_HEIGHT*UIScreen.main.scale)) else {
+        return nil
+    }
+    
+    let sendImage = UIImage(cgImage: sendImageCG)
+    return sendImage
+    
+}
+
 ///获取视频截图
 public func mw_getScreenShotImageFromLocalVideo(url: URL, seconds: Double = 0.0, completion: @escaping ImageCallBack) {
     DispatchQueue.global().async {
