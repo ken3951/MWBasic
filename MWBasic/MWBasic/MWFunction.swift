@@ -200,7 +200,7 @@ public func mw_changeVideoFormatWithSourceUrl(sourceUrl: URL, completion: @escap
         
         let formater = DateFormatter()
         formater.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-        let filePath = "output-\(formater.string(from: Date())).mp4"
+        let filePath = "mp4Video/output-\(formater.string(from: Date())).mp4"
         let resultPath = NSHomeDirectory().appending("/Documents/\(filePath)")
         
         exportSession?.outputURL = URL(fileURLWithPath: resultPath)
