@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnActopm(_ sender: UIButton) {
-        MWToastView.show(message: "test")
         
         let image = mw_getScreenShotFromWindow()
     }

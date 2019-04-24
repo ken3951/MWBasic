@@ -1,44 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Demo Table View Controller-->
+        <scene sceneID="zsp-41-WxX">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MWBasic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DemoTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dwo-NP-Szq" customClass="DemoTableViewController" customModule="MWBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gje-eF-Ucf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="dwo-NP-Szq" id="MdM-dg-qNk"/>
+                            <outlet property="delegate" destination="dwo-NP-Szq" id="V6D-9b-1wI"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="myTableView" destination="gje-eF-Ucf" id="sIP-aK-HzP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yx1-Zt-nGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="95"/>
+        </scene>
+        <!--Toast View Controller-->
+        <scene sceneID="Lyb-Ky-XgG">
+            <objects>
+                <viewController storyboardIdentifier="MWToastViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hgi-cK-jKu" customClass="MWToastViewController" customModule="MWBasic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bRj-p8-tPw"/>
-                        <viewControllerLayoutGuide type="bottom" id="zpq-Yl-rxJ"/>
+                        <viewControllerLayoutGuide type="top" id="6Ym-qU-bxe"/>
+                        <viewControllerLayoutGuide type="bottom" id="NR6-LY-0wf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="9rl-Vs-MTo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-xr-cJh">
-                                <rect key="frame" x="46" y="64" width="168" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="测试重复点击"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9F-65-gir">
+                                <rect key="frame" x="132.5" y="97" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="d6Y-X1-BwY"/>
+                                    <constraint firstAttribute="width" constant="110" id="lsY-w4-9jN"/>
+                                </constraints>
+                                <state key="normal" title="top"/>
                                 <connections>
-                                    <action selector="btnActopm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hzF-DV-57E"/>
+                                    <action selector="topAction:" destination="Hgi-cK-jKu" eventType="touchUpInside" id="X2C-Bh-VhY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M6-SS-f31">
+                                <rect key="frame" x="132.5" y="193" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="inz-p4-10c"/>
+                                    <constraint firstAttribute="width" constant="110" id="r66-oB-a5h"/>
+                                </constraints>
+                                <state key="normal" title="center"/>
+                                <connections>
+                                    <action selector="centerAction:" destination="Hgi-cK-jKu" eventType="touchUpInside" id="BR6-sW-5CI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXI-Wz-XlQ">
+                                <rect key="frame" x="132.5" y="269" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="UEw-J7-ZWi"/>
+                                    <constraint firstAttribute="height" constant="30" id="kBD-4O-ztH"/>
+                                </constraints>
+                                <state key="normal" title="bottom"/>
+                                <connections>
+                                    <action selector="bottomAction:" destination="Hgi-cK-jKu" eventType="touchUpInside" id="O25-NE-ZUj"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XXI-Wz-XlQ" firstAttribute="top" secondItem="7M6-SS-f31" secondAttribute="bottom" constant="46" id="5Mk-sz-PEg"/>
+                            <constraint firstItem="7M6-SS-f31" firstAttribute="top" secondItem="U9F-65-gir" secondAttribute="bottom" constant="66" id="7EN-iA-p42"/>
+                            <constraint firstItem="U9F-65-gir" firstAttribute="top" secondItem="6Ym-qU-bxe" secondAttribute="bottom" constant="77" id="7vA-bH-eG9"/>
+                            <constraint firstItem="XXI-Wz-XlQ" firstAttribute="centerX" secondItem="9rl-Vs-MTo" secondAttribute="centerX" id="Lko-0s-naD"/>
+                            <constraint firstItem="7M6-SS-f31" firstAttribute="centerX" secondItem="9rl-Vs-MTo" secondAttribute="centerX" id="eNh-Pf-Mja"/>
+                            <constraint firstItem="U9F-65-gir" firstAttribute="centerX" secondItem="9rl-Vs-MTo" secondAttribute="centerX" id="q0N-rm-A0o"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="testBtn" destination="rpo-xr-cJh" id="fii-g9-coY"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQH-XN-dtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="544.79999999999995" y="97.601199400299862"/>
+        </scene>
+        <!--Syn View Controller-->
+        <scene sceneID="rDx-7S-zFY">
+            <objects>
+                <viewController storyboardIdentifier="MWSynViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ncV-eu-9fZ" customClass="MWSynViewController" customModule="MWBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nwF-xv-9ff"/>
+                        <viewControllerLayoutGuide type="bottom" id="zqp-ON-1YP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PDc-kT-rlV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v3-rp-5i6">
+                                <rect key="frame" x="125" y="98" width="124" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="mainSyn"/>
+                                <connections>
+                                    <action selector="mainSynAction:" destination="ncV-eu-9fZ" eventType="touchUpInside" id="HSa-So-ZVl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjo-WX-WIb">
+                                <rect key="frame" x="125" y="220" width="124" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="globalSyn"/>
+                                <connections>
+                                    <action selector="globalSyn:" destination="ncV-eu-9fZ" eventType="touchUpInside" id="VKB-Cn-NQ0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wU5-YH-rY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5999999999999" y="95.802098950524751"/>
+        </scene>
+        <!--Stream View Controller-->
+        <scene sceneID="36p-3X-qAa">
+            <objects>
+                <viewController storyboardIdentifier="MWStreamViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rL6-KF-9Wf" customClass="MWStreamViewController" customModule="MWBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rMn-Jy-p7w"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZo-3G-i2s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hku-T2-DBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-0Y-if7">
+                                <rect key="frame" x="137" y="66" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H1S-cV-5kF"/>
+                                    <constraint firstAttribute="width" constant="101" id="IfD-KV-0dq"/>
+                                </constraints>
+                                <state key="normal" title="testStream"/>
+                                <connections>
+                                    <action selector="testStreamAction:" destination="rL6-KF-9Wf" eventType="touchUpInside" id="G9o-aF-4G3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UBm-0Y-if7" firstAttribute="top" secondItem="rMn-Jy-p7w" secondAttribute="bottom" constant="46" id="Wq6-64-NN1"/>
+                            <constraint firstItem="UBm-0Y-if7" firstAttribute="centerX" secondItem="Hku-T2-DBQ" secondAttribute="centerX" id="YAZ-Sb-BAc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXI-6A-fLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2110" y="98"/>
         </scene>
     </scenes>
 </document>

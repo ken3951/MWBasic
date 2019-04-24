@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38279AA1226F018A005455F0 /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38279AA0226F018A005455F0 /* DemoTableViewController.swift */; };
+		38279AA5226F0573005455F0 /* MWToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38279AA4226F0573005455F0 /* MWToastViewController.swift */; };
+		38279AA7226F104D005455F0 /* MWStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38279AA6226F104D005455F0 /* MWStreamViewController.swift */; };
+		38279AA9226F1B41005455F0 /* MWSynViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38279AA8226F1B41005455F0 /* MWSynViewController.swift */; };
 		389FBE67224E020300E1CD7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE66224E020300E1CD7E /* AppDelegate.swift */; };
 		389FBE69224E020300E1CD7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE68224E020300E1CD7E /* ViewController.swift */; };
 		389FBE6C224E020300E1CD7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389FBE6A224E020300E1CD7E /* Main.storyboard */; };
 		389FBE6E224E020400E1CD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 389FBE6D224E020400E1CD7E /* Assets.xcassets */; };
 		389FBE71224E020400E1CD7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389FBE6F224E020400E1CD7E /* LaunchScreen.storyboard */; };
-		389FBE9E224E026700E1CD7E /* MWToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE7A224E026700E1CD7E /* MWToastView.swift */; };
+		389FBE9E224E026700E1CD7E /* MWToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE7A224E026700E1CD7E /* MWToast.swift */; };
 		389FBE9F224E026700E1CD7E /* MWDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE7B224E026700E1CD7E /* MWDefine.swift */; };
 		389FBEA0224E026700E1CD7E /* Date+MWExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE7D224E026700E1CD7E /* Date+MWExtension.swift */; };
 		389FBEA1224E026700E1CD7E /* UITableView+MWExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE7E224E026700E1CD7E /* UITableView+MWExtension.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38279AA0226F018A005455F0 /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
+		38279AA4226F0573005455F0 /* MWToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWToastViewController.swift; sourceTree = "<group>"; };
+		38279AA6226F104D005455F0 /* MWStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWStreamViewController.swift; sourceTree = "<group>"; };
+		38279AA8226F1B41005455F0 /* MWSynViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWSynViewController.swift; sourceTree = "<group>"; };
 		389FBE63224E020300E1CD7E /* MWBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		389FBE66224E020300E1CD7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		389FBE68224E020300E1CD7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +58,7 @@
 		389FBE70224E020400E1CD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		389FBE72224E020400E1CD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389FBE79224E026700E1CD7E /* MWBasic-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MWBasic-Bridging-Header.h"; sourceTree = "<group>"; };
-		389FBE7A224E026700E1CD7E /* MWToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWToastView.swift; sourceTree = "<group>"; };
+		389FBE7A224E026700E1CD7E /* MWToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWToast.swift; sourceTree = "<group>"; };
 		389FBE7B224E026700E1CD7E /* MWDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWDefine.swift; sourceTree = "<group>"; };
 		389FBE7D224E026700E1CD7E /* Date+MWExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MWExtension.swift"; sourceTree = "<group>"; };
 		389FBE7E224E026700E1CD7E /* UITableView+MWExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+MWExtension.swift"; sourceTree = "<group>"; };
@@ -120,6 +128,10 @@
 				389FBE78224E026700E1CD7E /* MWBasic */,
 				389FBE66224E020300E1CD7E /* AppDelegate.swift */,
 				389FBE68224E020300E1CD7E /* ViewController.swift */,
+				38279AA0226F018A005455F0 /* DemoTableViewController.swift */,
+				38279AA4226F0573005455F0 /* MWToastViewController.swift */,
+				38279AA8226F1B41005455F0 /* MWSynViewController.swift */,
+				38279AA6226F104D005455F0 /* MWStreamViewController.swift */,
 				389FBE6A224E020300E1CD7E /* Main.storyboard */,
 				389FBE6D224E020400E1CD7E /* Assets.xcassets */,
 				389FBE6F224E020400E1CD7E /* LaunchScreen.storyboard */,
@@ -132,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				389FBE79224E026700E1CD7E /* MWBasic-Bridging-Header.h */,
-				389FBE7A224E026700E1CD7E /* MWToastView.swift */,
+				389FBE7A224E026700E1CD7E /* MWToast.swift */,
 				389FBE7B224E026700E1CD7E /* MWDefine.swift */,
 				389FBE8C224E026700E1CD7E /* MWFunction.swift */,
 				38CFEAF62255B8D000770128 /* MWStream.swift */,
@@ -264,6 +276,7 @@
 				389FBEB1224E026700E1CD7E /* NSNumber+MWCategory.m in Sources */,
 				389FBEAB224E026700E1CD7E /* UIImage+MWExtension.swift in Sources */,
 				389FBEAA224E026700E1CD7E /* UIColor+MWExtension.swift in Sources */,
+				38279AA7226F104D005455F0 /* MWStreamViewController.swift in Sources */,
 				38CFEAF72255B8D000770128 /* MWStream.swift in Sources */,
 				389FBEA7224E026700E1CD7E /* Dictionary+MWExtension.swift in Sources */,
 				389FBEA8224E026700E1CD7E /* UIView+MWExtension.swift in Sources */,
@@ -273,14 +286,17 @@
 				389FBEA3224E026700E1CD7E /* UITextField+MWExtension.swift in Sources */,
 				389FBEA4224E026700E1CD7E /* UIAlertController+MWExtension.swift in Sources */,
 				389FBEAF224E026700E1CD7E /* MWFunction.swift in Sources */,
+				38279AA9226F1B41005455F0 /* MWSynViewController.swift in Sources */,
 				389FBEB2224E026700E1CD7E /* UIImage+MWCategory.m in Sources */,
 				389FBEB3224E026700E1CD7E /* NSString+MWCategory.m in Sources */,
+				38279AA5226F0573005455F0 /* MWToastViewController.swift in Sources */,
 				389FBE9F224E026700E1CD7E /* MWDefine.swift in Sources */,
 				389FBEA9224E026700E1CD7E /* UserDefaults+MWExtension.swift in Sources */,
 				389FBEAC224E026700E1CD7E /* UIImageView+MWExtension.swift in Sources */,
+				38279AA1226F018A005455F0 /* DemoTableViewController.swift in Sources */,
 				389FBEB4224E026700E1CD7E /* NSURLRequest+MWCategory.m in Sources */,
 				389FBE69224E020300E1CD7E /* ViewController.swift in Sources */,
-				389FBE9E224E026700E1CD7E /* MWToastView.swift in Sources */,
+				389FBE9E224E026700E1CD7E /* MWToast.swift in Sources */,
 				389FBE67224E020300E1CD7E /* AppDelegate.swift in Sources */,
 				389FBEB5224E026700E1CD7E /* UIImage+BlurGlass.m in Sources */,
 				389FBEA5224E026700E1CD7E /* UIButton+MWExtension.swift in Sources */,
