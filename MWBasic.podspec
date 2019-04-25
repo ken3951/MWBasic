@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MWBasic"
-  spec.version      = "1.1.1"
+  spec.version      = "1.1.2"
   spec.summary      = "Basic tool in swift."
   spec.swift_version = "4.2"
 

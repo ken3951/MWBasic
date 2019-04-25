@@ -209,10 +209,18 @@ public func mw_convertVideoFormatToMp4(sourceUrl: URL, completion: @escaping MWS
         
         let formater = DateFormatter()
         formater.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-        let filePath = "mp4Video/output-\(formater.string(from: Date())).mp4"
-        let resultPath = NSHomeDirectory().appending("/Documents/\(filePath)")
+        let mp4FilePath = NSHomeDirectory().appending("/Documents/mp4Video")
+        let manager = FileManager.default
+        if !manager.fileExists(atPath: mp4FilePath) {
+            try? manager.createDirectory(atPath: mp4FilePath, withIntermediateDirectories: true, attributes: nil)
+        }
+
+        let fileName = "output-\(formater.string(from: Date())).mp4"
+        let filePath = mw_stringPath(mp4FilePath, fileName)
         
-        exportSession?.outputURL = URL(fileURLWithPath: resultPath)
+        let completionPath = mw_stringPath("Documents/mp4Video", fileName)
+        
+        exportSession?.outputURL = URL(fileURLWithPath: filePath)
         
         exportSession?.outputFileType = AVFileType.mp4
         
@@ -229,7 +237,7 @@ public func mw_convertVideoFormatToMp4(sourceUrl: URL, completion: @escaping MWS
                 completion(nil)
                 break
             case AVAssetExportSession.Status.completed:
-                completion(filePath)
+                completion(completionPath)
                 break
             case AVAssetExportSession.Status.failed:
                 completion(nil)
