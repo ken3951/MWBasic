@@ -16,9 +16,10 @@ public extension UITextField {
         return self
     }
     
-    func mw_setPlaceholderColor(color: UIColor) -> Self {
-        self.setValue(self.font, forKeyPath: "_placeholderLabel.font")
-        self.setValue(color, forKeyPath: "_placeholderLabel.textColor")
+    func mw_setAttributedPlaceholder(color: UIColor, placeholder: String) -> Self {
+        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.font: font as Any])
+//        self.setValue(self.font, forKeyPath: "_placeholderLabel.font")
+//        self.setValue(color, forKeyPath: "_placeholderLabel.textColor")
         return self
     }
     
@@ -38,6 +39,7 @@ public extension UITextField {
     // default is nil. use system font 12 pt
     func mw_font(_ value: UIFont?) -> Self {
         font = value
+
         return self
     }
     
@@ -62,7 +64,11 @@ public extension UITextField {
     
     // default is nil. string is drawn 70% gray
     func mw_placeholder(_ value: String?) -> Self {
-        placeholder = value
+//        placeholder = value
+        
+        let str = value ?? ""
+
+        attributedPlaceholder = NSAttributedString(string: str, attributes: [:])
         return self
     }
     

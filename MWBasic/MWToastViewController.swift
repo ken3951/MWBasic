@@ -15,6 +15,9 @@ class MWToastViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        
+        
+        let textField = UITextField().mw_frame(CGRect(x: 0, y: 200, width: 100, height: 100)).mw_setAttributedPlaceholder(color: UIColor.red, placeholder: "test").mw_addToView(self.view)
     }
     
     @IBAction func topAction(_ sender: Any) {
