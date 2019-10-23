@@ -112,10 +112,10 @@ public extension String {
     }
     
     ///string转字典
-    func mw_toDictionary() -> [String: Any]? {
+    func mw_toDictionary() -> [String: Any?]? {
         if let data = self.data(using: .utf8) {
             do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any?]
             } catch {
                 mw_print_d(error.localizedDescription)
             }
@@ -124,10 +124,10 @@ public extension String {
     }
     
     ///string转数组
-    func mw_toArray() -> Array<Any>? {
+    func mw_toArray() -> Array<Any?>? {
         if let data = self.data(using: .utf8) {
             do {
-                return try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? Array<Any>
+                return try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? Array<Any?>
             } catch {
                 mw_print_d(error.localizedDescription)
             }
