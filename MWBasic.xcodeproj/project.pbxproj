@@ -41,7 +41,6 @@
 		389FBEB4224E026700E1CD7E /* NSURLRequest+MWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE94224E026700E1CD7E /* NSURLRequest+MWCategory.m */; };
 		389FBEB5224E026700E1CD7E /* UIImage+BlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE95224E026700E1CD7E /* UIImage+BlurGlass.m */; };
 		389FBEB6224E026700E1CD7E /* NSDate+MWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE97224E026700E1CD7E /* NSDate+MWCategory.m */; };
-		389FBEB7224E026700E1CD7E /* UIControl+MWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 389FBE99224E026700E1CD7E /* UIControl+MWCategory.m */; };
 		38CFEAF72255B8D000770128 /* MWStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFEAF62255B8D000770128 /* MWStream.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,13 +80,11 @@
 		389FBE90224E026700E1CD7E /* NSDate+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MWCategory.h"; sourceTree = "<group>"; };
 		389FBE91224E026700E1CD7E /* UIImage+MWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MWCategory.m"; sourceTree = "<group>"; };
 		389FBE92224E026700E1CD7E /* NSString+MWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MWCategory.m"; sourceTree = "<group>"; };
-		389FBE93224E026700E1CD7E /* UIControl+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+MWCategory.h"; sourceTree = "<group>"; };
 		389FBE94224E026700E1CD7E /* NSURLRequest+MWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+MWCategory.m"; sourceTree = "<group>"; };
 		389FBE95224E026700E1CD7E /* UIImage+BlurGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurGlass.m"; sourceTree = "<group>"; };
 		389FBE96224E026700E1CD7E /* UIWebView+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+MWCategory.h"; sourceTree = "<group>"; };
 		389FBE97224E026700E1CD7E /* NSDate+MWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MWCategory.m"; sourceTree = "<group>"; };
 		389FBE98224E026700E1CD7E /* NSNumber+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+MWCategory.h"; sourceTree = "<group>"; };
-		389FBE99224E026700E1CD7E /* UIControl+MWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+MWCategory.m"; sourceTree = "<group>"; };
 		389FBE9A224E026700E1CD7E /* NSString+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MWCategory.h"; sourceTree = "<group>"; };
 		389FBE9B224E026700E1CD7E /* UIImage+MWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MWCategory.h"; sourceTree = "<group>"; };
 		389FBE9C224E026700E1CD7E /* UIImage+BlurGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurGlass.h"; sourceTree = "<group>"; };
@@ -187,8 +184,6 @@
 				389FBE92224E026700E1CD7E /* NSString+MWCategory.m */,
 				389FBE9D224E026700E1CD7E /* NSURLRequest+MWCategory.h */,
 				389FBE94224E026700E1CD7E /* NSURLRequest+MWCategory.m */,
-				389FBE93224E026700E1CD7E /* UIControl+MWCategory.h */,
-				389FBE99224E026700E1CD7E /* UIControl+MWCategory.m */,
 				389FBE9C224E026700E1CD7E /* UIImage+BlurGlass.h */,
 				389FBE95224E026700E1CD7E /* UIImage+BlurGlass.m */,
 				389FBE9B224E026700E1CD7E /* UIImage+MWCategory.h */,
@@ -271,7 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				389FBEA0224E026700E1CD7E /* Date+MWExtension.swift in Sources */,
-				389FBEB7224E026700E1CD7E /* UIControl+MWCategory.m in Sources */,
 				389FBEB6224E026700E1CD7E /* NSDate+MWCategory.m in Sources */,
 				389FBEB1224E026700E1CD7E /* NSNumber+MWCategory.m in Sources */,
 				389FBEAB224E026700E1CD7E /* UIImage+MWExtension.swift in Sources */,
@@ -449,14 +443,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.4;
+				CURRENT_PROJECT_VERSION = 1.1.5;
 				INFOPLIST_FILE = MWBasic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cimen.MWBasic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/MWBasic/MWBasic-Bridging-Header.h";
@@ -470,14 +464,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.4;
+				CURRENT_PROJECT_VERSION = 1.1.5;
 				INFOPLIST_FILE = MWBasic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cimen.MWBasic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/MWBasic/MWBasic-Bridging-Header.h";
