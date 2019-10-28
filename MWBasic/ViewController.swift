@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        testBtn.mw_eventInterval = 10
         
         let _ = MWStream().execute({ (dataValue,streamContinue) in
             print("dataDic=\(dataValue ?? "")")
