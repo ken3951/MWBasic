@@ -76,7 +76,7 @@ public extension UIImage {
         let size = kb * 1024
         var compression = 0.9
         let minCompression = 0.1
-        var data = self.jpegData(compressionQuality: CGFloat(compression))
+        let data = self.jpegData(compressionQuality: CGFloat(compression))
         while data!.count > size && compression > minCompression {
             compression -= 0.1
             self.jpegData(compressionQuality: CGFloat(compression))
