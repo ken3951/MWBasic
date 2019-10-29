@@ -13,6 +13,8 @@
 #endif /* MWBasic_Bridging_Header_h */
 @import UIKit;
 
+#import "UIControl+MWCategory.h"
+
 #import <AVFoundation/AVAsset.h>
 #import <AVFoundation/AVAssetImageGenerator.h>
 #import <MobileCoreServices/MobileCoreServices.h>
