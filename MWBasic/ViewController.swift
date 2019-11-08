@@ -27,8 +27,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnActopm(_ sender: UIButton) {
-        
-        let image = mw_getScreenShotFromWindow()
+        _ = mw_getScreenShotFromWindow()
     }
     
 }
